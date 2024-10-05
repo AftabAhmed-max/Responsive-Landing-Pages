@@ -4,31 +4,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
   font-family: "Playwrite DE Grund", cursive;
 }
 
-html,body {
-  height: 100%;
-  width: 100%;
+html {
+  font-size: 62.6%;
+  overflow-x: hidden;
+}
+
+body {
   background-color: #E2E2E2;
-  position: relative;
+  color: #151515;
+}
+
+section {
+  min-height: 100vh;
+  padding: 6rem 9% 6rem;
 }
 
 /* Header Section */
 
 header {
   position: fixed;
-  background-color: #E2E2E2;
   top: 0;
-  height: 81px;
+  left: 0;
   width: 100%;
+  padding: 2rem 9%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 0;
-  padding: 4vw;
-  border: none;
-  gap: 4vw;
+  gap: 10rem;  
   z-index: 100;
+  background-color: #E2E2E2;
 }
 
 nav {
@@ -41,23 +52,23 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: 4rem;
   list-style-type: none;
 }
 
 nav ul li {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 nav .signup {
   display: flex;
-  gap: 1.5vw;
+  gap: 2rem;
 }
 
 .signup button {
   margin: 0;
-  padding: 0.7vw 1.6vw;
-  font-size: 1.2vw;
+  padding: 0.7rem 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
   border: none;
 }
@@ -72,196 +83,22 @@ nav .signup {
   color: #fff;
 }
 
-/* Main Section */
-
-main {
-  min-height: 100vh;
-  width: 100%;
-  padding-bottom: 10vw;
-  position: relative;
-}
-
 /* Home Section */
 
 .home {
-  margin: 14vw 4vw 16vw 4vw;
-  display: flex;
-  align-items: start;
-}
-
-.info {
-  height: 100%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
-}
-
-.info h1 {
-  font-size: 4.2vw;
-  width: 90%;
-}
-
-.info p {
-  font-size: 1.5vw;
-  width: 85%;
-}
-
-.start {
-  display: flex;
-  gap: 0;
-  margin-top: 1vw;
-}
-
-.start input {
-  height: 3vw;
-  width: 60%;
-  margin: 0;
-}
-
-.start input::placeholder {  
-  padding: 2vw;
-  font-size: 1.2vw;
-  color: #151515;
-}
-
-.start button {
-  background-color: #151515;
-  color: #fff;
-  padding: 0.6vw 1.2vw;
-  border: none;
-  margin: 0;
-}
-
-.payment {
-  margin-top: 1vw;
-  display: flex;
-  gap: 2.5vw;
-}
-
-.illus1 {
-  height: 100%;
-  width: 40%;
-}
-
-.illus1 img {
-  height: 100%;
-  width: 100%;
-}
-
-/* About Section */
-
-.about {
-  margin: 14vw 4vw 12vw 4vw;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.about .illus2 {
-  height: 100%;
-  width: 40%;
-}
+/* .info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+} */
 
 .illus2 img {
-  height: 100%;
-  width: 100%;
-}
-
-.about .about-info {
-  height: 100%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 1vw;
-}
-
-.about-info h2 {
-  position: absolute;
-  padding: 0.5vw 1.6vw;
-  font-size: 1vw;
-  border: 1px solid #151515;
-  font-weight: 600;
-  background-color: transparent;
-}
-
-.about-info h1 {
-  margin-top: 4vw;
-  font-size: 4.2vw;
-  width: 100%;
-}
-
-.about-info p {
-  font-size: 1.5vw;
-  width: 100%;
-}
-
-.about-info ul {
-  margin-top: 1vw;
-  margin-left: 1.5vw;
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
-  list-style-type: square;
-}
-
-.about-info ul li {
-  font-size: 1.2vw;
-}
-
-/* How it works Section */
-
-.how {
-  margin: 14vw 4vw 12vw 4vw;
-  display: flex;
-  align-items: start;
-}
-
-.how h2 {
-  position: absolute;
-  padding: 0.5vw 1.6vw;
-  font-size: 1vw;
-  border: 1px solid #151515;
-  font-weight: 600;
-  background-color: transparent;
-}
-
-.how-info {
-  height: 100%;
-  width: 60%;
-}
-
-.how-info h1 {
-  margin-top: 3.5vw;
-  font-size: 2vw;
-  width: 100%;
-}
-
-.collab {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2vw;
-  gap: 2vw;
-}
-
-.collab1 , .collab2 ,.collab3 ,.collab4  {
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-}
-
-.collab-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6vw;
-}
-
-.collab-info p:nth-of-type(1) {
-  font-size: 1.5vw;
-  font-weight: 800;
-}
-
-.collab-info p:nth-of-type(2) {
-  font-weight: 500;
-  width: 70%;
+  height: 70%;
+  width: 20vw;
 }
