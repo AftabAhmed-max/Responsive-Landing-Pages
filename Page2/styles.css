@@ -12,8 +12,8 @@
 }
 
 html {
-  font-size: 62.6%;
-  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  font-size: 10px;
 }
 
 body {
@@ -21,9 +21,16 @@ body {
   color: #151515;
 }
 
+main {
+  margin-top: 92px;
+}
+
 section {
-  min-height: 100vh;
-  padding: 6rem 9% 6rem;
+  scroll-snap-align: start;
+  height: calc(100vh - 92px);
+  scroll-margin-top: 92px;
+  overflow-x: hidden;
+  padding: 2rem 9%;
 }
 
 /* Header Section */
@@ -91,14 +98,200 @@ nav .signup {
   justify-content: center;
 }
 
-/* .info {
+.info {
+  height: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: center;
   gap: 2rem;
-} */
+}
+
+.info h2 {
+  font-size: 5rem;
+  width: 90%;
+}
+
+.info p {
+  font-size: 2rem;
+  width: 85%;
+}
+
+.start {
+  display: flex;
+  width: 80%;
+  justify-content: left;
+  gap: 0;
+  margin-top: 1rem;
+}
+
+.start input {
+  width: 100%;  
+  max-width: 400px;  
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.start input::placeholder {
+  padding: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.start button {
+  background-color: #151515;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  margin: 0;
+}
+
+.method {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.illus1 {
+  height: 100%;
+  width: 40%;
+}
+
+.illus1 img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* About Section */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about .about-info {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.abt-heading {
+  position: absolute;
+  top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: 1px solid #151515;
+  font-weight: bolder;
+  background-color: transparent;
+}
+
+.about-info h2 {
+  margin-top: 5rem;
+  font-size: 4rem;
+  width: 100%;
+}
+
+.about-info p {
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.about-info ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  gap: 1vw;
+  list-style-type: square;
+}
+
+.about-info ul li {
+  font-size: 1.2vw;
+}
+
+.about .illus2 {
+  height: 100%;
+  width: 40%;
+}
 
 .illus2 img {
-  height: 70%;
-  width: 20vw;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* How it works Section */
+
+.how {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.how-heading {
+  position: absolute;
+  top: 0;
+  right: 40%;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: 1px solid #151515;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.how-info {
+  height: 100%;
+  width: 60%;
+}
+
+.how-info h2 {
+  font-size: 2vw;
+  width: 100%;
+}
+
+.collab {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.collab1 , .collab2 ,.collab3 ,.collab4  {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.collab-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.collab-info p:nth-of-type(1) {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.collab-info p:nth-of-type(2) {
+  font-weight: 500;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.how .illus3 {
+  height: 100%;
+  width: 40%;
+}
+
+.illus3 img {
+  width: 90%;
+  height: 100%;
 }
