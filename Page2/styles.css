@@ -33,7 +33,7 @@ section {
   padding: 2rem 9%;
 }
 
-/* Header Section */
+/* Header Section ************************************************************************************/
 
 header {
   position: fixed;
@@ -90,12 +90,25 @@ nav .signup {
   color: #fff;
 }
 
-/* Home Section */
+/* ***************************************************Home Section***************************************** */
 
 .home {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.home-heading {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  border: 1px solid #151515;
+  font-weight: bolder;
+  background-color: transparent;
 }
 
 .info {
@@ -163,7 +176,7 @@ nav .signup {
 }
 
 
-/* About Section */
+/* About Section******************************************************************************************* */
 
 .about {
   display: flex;
@@ -205,6 +218,7 @@ nav .signup {
 .about-info ul {
   display: flex;
   flex-direction: column;
+  align-items: start;
   padding-top: 1rem;
   padding-left: 2.5rem;
   gap: 1vw;
@@ -226,7 +240,7 @@ nav .signup {
   height: auto;
 }
 
-/* How it works Section */
+/* How it works Section **********************************************************************************/
 
 .how {
   display: flex;
@@ -252,7 +266,7 @@ nav .signup {
 }
 
 .how-info h2 {
-  font-size: 2vw;
+  font-size: 2.7rem;
   width: 100%;
 }
 
@@ -294,4 +308,134 @@ nav .signup {
 .illus3 img {
   width: 90%;
   height: 100%;
+}
+
+/* For 1024px *************************************************************************************************/
+
+@media (max-width: 1024px) {
+
+/* Home */
+
+.info h2 {
+  font-size: 4rem;
+}
+
+.start input {
+  width: 100%;    
+  padding: 0.5rem 1.5rem;
+  font-size: 1.6rem;
+}
+
+.start input::placeholder {
+  padding: 0.4rem;
+  font-size: 1.6rem;
+}
+
+.start button {
+  padding: 0.6rem 1.6rem;
+}
+
+/* About */
+
+.about .illus2 {
+  display: flex;
+  align-items: center;
+}
+
+.about .about-info {
+  text-align: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.abt-heading {
+  top: 2rem;
+  left: 9%;
+}
+
+.about-info h2 { 
+  margin-top: 0;
+  font-size: 3.4rem;
+}
+
+.about-info p {
+  font-size: 1.7rem;
+}
+
+.about-info ul li {
+  font-size: 1.5rem;
+}
+
+/* How */
+
+.illus3 {
+  display: flex;
+  align-items: end;
+}
+
+.illus3 img {
+  width: 90%;
+  height: 90%;
+}
+
+.how-heading {
+  position: absolute;
+  top: 2rem;
+  right: 9%;
+}
+
+.how-info h2 {
+  font-size: 2.4rem;
+}
+
+}
+
+
+/* ***********************************************************for 768 px ****************************************************/
+
+@media (max-width : 768px) {
+
+header {
+  gap: 3rem;
+}
+
+nav ul {
+  gap: 3rem;
+}
+
+nav .signup {
+  gap: 1rem;
+}
+
+
+/* Home */
+
+.home-heading {
+  display: block;
+  left: 43%;
+}
+
+.info h2 {
+  font-size: 4rem;
+  width: 100%;
+}
+
+.info p {
+  font-size: 2rem;
+  width: 100%;
+}
+
+.info {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.illus1 {
+  display: none;
+}
+
+
+
 }
