@@ -256,7 +256,7 @@ nav .signup {
   padding: 1rem 2rem;
   font-size: 1rem;
   border: 1px solid #151515;
-  font-weight: 600;
+  font-weight: bolder;
   background-color: transparent;
 }
 
@@ -435,6 +435,76 @@ nav .signup {
 .illus1 {
   display: none;
 }
+
+/* About */
+
+.abt-heading {
+  top: 0;
+  left: 43%;
+}
+
+.about .about-info {
+  width: 100%;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.about-info h2 {
+  margin-top: 4rem;
+  font-size: 4rem;
+}
+
+.about-info p {
+  font-size: 2rem;
+  width: 100%;
+}
+
+.about-info ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  gap: 1rem;
+  list-style-type: square;
+}
+
+.about-info ul li {
+  font-size: 1.5rem;
+}
+
+.about .illus2 {
+  display: none;
+}
+
+.how-heading {
+  position: absolute;
+  top: 0;
+  right: 7%;
+}
+
+.how-info {
+  width: 100%;
+  align-items: center;
+}
+
+.how-info h2 {
+  position: absolute;
+  top: 0;
+  left: 7%;
+}
+
+.collab {
+  margin-top: 5rem;
+  gap: 1.3rem;
+}
+
+.how .illus3 {
+  display: none;
+}
+
+
 
 
 
