@@ -49,25 +49,48 @@ header {
   background-color: #E2E2E2;
 }
 
-nav {
+header h1 {
+  display: none;
+}
+
+nav.mobile {
+  display: none;
+}
+
+header i {
+  display: none;
+}
+
+nav.big {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
 
-nav ul {
+nav.big ul {
   display: flex;
   align-items: center;
   gap: 4rem;
   list-style-type: none;
 }
 
-nav ul li {
+nav.big ul li {
   font-size: 1.5rem;
 }
 
-nav .signup {
+nav.big ul li a{
+  text-decoration: none;
+  color: #151515;
+}
+
+nav.mobile ul li a{
+  text-decoration: none;
+  color: #151515;
+}
+
+
+nav.big .signup {
   display: flex;
   gap: 2rem;
 }
@@ -316,6 +339,18 @@ nav .signup {
 
 /* Home */
 
+nav.mobile {
+  display: none;
+}
+
+header i {
+  display: none;
+}
+
+header h1 {
+  display: none;
+}
+
 .info h2 {
   font-size: 4rem;
 }
@@ -395,15 +430,27 @@ nav .signup {
 
 @media (max-width : 768px) {
 
+nav.mobile {
+  display: none;
+}
+
+header h1 {
+  display: none;
+}
+
+header i {
+  display: none;
+}
+
 header {
   gap: 3rem;
 }
 
-nav ul {
+nav.big ul {
   gap: 3rem;
 }
 
-nav .signup {
+nav.big .signup {
   gap: 1rem;
 }
 
@@ -478,6 +525,8 @@ nav .signup {
   display: none;
 }
 
+/* How */
+
 .how-heading {
   position: absolute;
   top: 0;
@@ -504,8 +553,205 @@ nav .signup {
   display: none;
 }
 
+}
+
+/* *************************************************for Mobile 425px ***********************************************/
+
+@media (max-width: 425px) {
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+main {
+  margin-top: 72px;
+}
+
+section {
+  height: calc(100vh - 72px);
+  scroll-margin-top: 72px;
+}
+
+header {
+  padding: 1rem 4%;
+}
+
+nav.big {
+  display: none;
+}
+
+nav.mobile {
+  display: none;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  background-color: #bdbdbd;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+nav.mobile ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2%;
+}
+
+nav.mobile ul li {
+  font-size: 1.5rem;
+  color: #151515;
+  font-weight: 700;
+}
+
+header h1 {
+  display: block;
+}
+
+header i:nth-of-type(1) {
+  display: block;
+  font-size: 3rem;
+}
+
+header i:nth-of-type(2) {
+  display: none;
+  font-size: 3rem;
+}
+
+/* Home */
+
+.home-heading {
+  display: none;
+}
+
+.info h2 {
+  font-size: 3rem;
+}
+
+.info {
+  gap: 2rem;
+}
+
+/* About */
 
 
+.abt-heading {
+  display: none;
+}
+
+.about .about-info {
+  width: 100%;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.about-info h2 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.about-info p {
+  font-size: 1.7rem;
+  width: 100%;
+}
+
+.about-info ul {
+  gap: 0.6rem;
+  text-align: left;
+  align-items: start;
+}
+
+.about-info ul li {
+  font-size: 1.3rem;
+}
+
+/* How */
+
+.how {
+  position: relative;
+}
+
+.how-heading {
+  display: none;
+}
+
+.how-info {
+  text-align: center;
+  align-items: center;
+}
+
+.how-info h2 {
+  position: inherit;
+  font-size: 3rem;
+}
+
+.collab1 img, .collab2 img, .collab3 img ,.collab4 img {
+  display: none;
+}
+
+.collab-info {
+  align-items: start;
+  text-align: start;
+} 
+
+.collab {
+  margin-top: 2rem;
+  gap: 1.3rem;
+}
+
+}
+
+/* *******************************************for 375px */
+
+@media (max-width:375px) {
+
+
+.about .about-info {
+  gap: 1.2rem;
+}
+
+.about-info h2 {
+  font-size: 2.7rem;
+}
+
+.about-info ul li {
+  font-size: 1.3rem;
+}
+
+.how-info h2 {
+  position: inherit;
+  font-size: 2.6rem;
+}
+
+nav.mobile {
+  top: 90px;
+}
+
+main {
+  margin-top: 90px;
+}
+
+section {
+  height: calc(100vh - 90px);
+  scroll-margin-top: 90px;
+}
+
+.info h2 {
+  font-size: 2.5rem;
+}
+
+.about-info h2 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+}
+
+.about-info p {
+  font-size: 1.5rem;
+  width: 100%;
+}
 
 
 }

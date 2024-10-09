@@ -4,29 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
   <title>Responsive Design 2</title>
 </head>
 <body>
   <header>
     <img src="./static/6. Logotype/LogoBlack.png" alt="">
-    <nav>
+    <nav class="big">
       <ul>
-        <li>About Us</li>
-        <li>How it work</li>
-        <li>Pricing</li>
-        <li>FAQs</li>
+        <li><a href="#home" id="home-btn">Home</a></li>
+        <li><a href="#about" id="about-btn">About Us</a></li>
+        <li><a href="#how" id="how-btn">How it Works</a></li>
       </ul>
       <div class="signup">
         <button>Login</button>
         <button>Sign Up</button>
       </div>
     </nav>
+    <nav class="mobile">
+      <ul>
+        <li><a href="#home" id="home-btn">Home</a></li>
+        <li><a href="#about" id="about-btn">About Us</a></li>
+        <li><a href="#how" id="how-btn">How it Works</a></li>
+      </ul>
+    </nav>
+    <h1>Insight Solutions</h1>
+    <i id="burger-menu" class="ri-menu-3-line"></i>
+    <i id="close" class="ri-close-line"></i>
   </header>
   
 
   <main>
 
-    <section class="home">
+    <section class="home" id="home">
       <div class="info">
         <span class="home-heading">Home</span>
         <h2>Always Track & Analyze Your Business Statistics To Succeed.</h2>
@@ -46,7 +56,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="illus2">
         <img src="./static/5. Illustrations/Illustrations_2.png" alt="">
       </div>
@@ -64,7 +74,7 @@
       </div>
     </section>
 
-    <section class="how">
+    <section class="how" id="how">
       <div class="how-info">
         <span class="how-heading">HOW IT WORKS</span>
         <h2>Building the best space for collaboration.</h2>
@@ -109,12 +119,59 @@
       </div>
     </section>
 
-    
-
   </main>
 
-    
+  <script>
+    const menuBtn1 = document.querySelector('#burger-menu');
+    const menuBtn2 = document.querySelector('#close');
+    const menuBar = document.querySelector('nav.mobile');
 
-  
+    menuBtn1.addEventListener( 'click', () => {    
+      menuBar.style.display = 'block';
+      menuBtn1.style.display = 'none';
+      menuBtn2.style.display = 'block';
+    })
+
+    menuBtn2.addEventListener('click', () => {
+      menuBar.style.display = 'none'; 
+      menuBtn1.style.display = 'block'; 
+      menuBtn2.style.display = 'none';
+    });
+
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 425) { 
+        menuBtn1.style.display = 'none'; 
+        menuBtn2.style.display = 'none'; 
+        menuBar.style.visibility = 'hidden'; 
+      } else if (window.innerWidth <= 425) {
+        menuBtn1.style.display = 'block';  
+        menuBtn2.style.display = 'none';  
+        menuBar.style.visibility = 'visible'; 
+      }
+    });
+
+    document.getElementById('home-btn').addEventListener('click', (event) => {
+      event.preventDefault(); 
+
+      const section = document.getElementById('home');
+      section.scrollIntoView({ behavior: 'smooth' }); 
+    });
+    
+    document.getElementById('about-btn').addEventListener('click', (event) => {
+      event.preventDefault(); 
+
+      const section = document.getElementById('about');
+      section.scrollIntoView({ behavior: 'smooth' }); 
+    });
+    
+    document.getElementById('how-btn').addEventListener('click', (event) => {
+      event.preventDefault(); 
+
+      const section = document.getElementById('how');
+      section.scrollIntoView({ behavior: 'smooth' }); 
+    });
+  </script>  
+
 </body>
 </html>
